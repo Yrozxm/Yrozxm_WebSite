@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="PT">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Yrozxm's Website</title>
+        <link rel="icon" type="image/png" href="img/icon.ico"/>
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h2 class="logo">Yrozxm</h2>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#interests">Interests</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div id="time" class="time-display"></div>
+        </div>
+    </nav>
+    <header class="hero">
+        <div class="container">
+            <img src="img/0e3a5185125ef7a0059bc3f1a52e6b0c.gif" alt="Profile Picture" class="profile-pic">
+            <h1>Hello, I'm <span>Yrozxm</span>!</h1>
+            <p>A developer passionate about creating, innovating, and learning 🚀</p>
+            <a class="btn" id="showMessageBtn">Get in Touch</a>
+            <div id="popup-message">Niiiigggggggggggaaaaaaaaaaaa 🎅🏿</div>
+        </div>
+    </header>
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I am passionate about <strong>programming</strong>, love exploring alternative operating systems, and tackling technological challenges. My goal is to always learn something new and share knowledge.</p>
+        </div>
+    </section>
+    <section id="interests" class="interests">
+        <div class="container">
+            <h2>My Interests</h2>
+            <div class="cards">
+                <div class="card">💻 Linux and Systems</div>
+                <div class="card">🖥️ Programming</div>
+                <div class="card">🎮 Gaming</div>
+                <div class="card">📜 Retro Style</div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>📬 Discord: <strong>yrozxm</strong></p>
+            <p>🌐 GitHub: <a href="https://github.com/Yrozxm" target="_blank">Visit my GitHub</a></p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Yrozxm. Developed with love 💜</p>
+    </footer>
+    <script>
+        document.getElementById('showMessageBtn').addEventListener('click', function(event) {
+            event.preventDefault();
+            const popupMessage = document.getElementById('popup-message');
+            popupMessage.style.display = 'block';
+        });
+        function updatePortugalTime() {
+            const now = new Date();
+            const options = { timeZone: 'Europe/Lisbon', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            const timeString = now.toLocaleTimeString('en-GB', options);
+            document.getElementById('time').textContent = `Portugal Time: ${timeString}`;
+        }
+        setInterval(updatePortugalTime, 1000);
+        updatePortugalTime();
+    </script>
+</body>
+</html>
